@@ -1,0 +1,29 @@
+.first-bg-container {
+    position: relative;
+}
+
+.first-bg-container .first-bg-content {
+    position: absolute;
+    bottom: 0;
+    background: #BC3A8088;
+    width: 100%;
+    height: 100%;
+}
+
+.centered {
+    width: 60%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.join-button {
+    --tw-gradient-from: #BC3A80;
+    --tw-gradient-to: #3F3DB8;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(229, 231, 235, 0));
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
