@@ -19,11 +19,12 @@
 }
 
 .join-button {
-    --tw-gradient-from: #BC3A80;
-    --tw-gradient-to: #3F3DB8;
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(229, 231, 235, 0));
     position: absolute;
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.border-color {
+    border-color: #A23E7E;
 }
