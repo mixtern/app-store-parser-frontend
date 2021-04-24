@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OurTeam } from "./../../shared/landing/our-team"
 
 @Component({
   selector: 'app-landing',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
 
+  OurTeam = OurTeam;
   constructor() { }
 
   ngOnInit() {
