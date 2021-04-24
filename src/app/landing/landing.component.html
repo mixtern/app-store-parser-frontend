@@ -17,28 +17,10 @@
       Что такое <span class="rg-style-text">ReviewGator</span>?
     </div>
     <div class="grid grid-cols-2 gap-24 mb-32">
-      <div>
-        <span class="font-bold text-3xl"><span class="rg-style-text">01</span> Ваш помощник</span>
+      <div *ngFor="let description of WhatIsReviewGator; let i = index">
+        <span class="font-bold text-3xl"><span class="rg-style-text">{{i > 9 ? "" : "0"}}{{i + 1}}</span> {{description.title}}</span>
         <div class="border-t-2 border-black text-lg mt-4 pt-2">
-          Помогает бизнесу решать, важные задачи, при минимальных усилиях, не тратя на это ваше время
-        </div>
-      </div>
-      <div>
-        <span class="font-bold text-3xl"><span class="rg-style-text font-bold">02</span> Личный аналитик</span>
-        <div class="border-t-2 border-black text-lg mt-4 pt-2">
-          Снимает с вас отвественность по сбору информации о вашем продукте, мониторингу рейтинга, и контролю за его качеством.
-        </div>
-      </div>
-      <div>
-        <span class="font-bold text-3xl"><span class="rg-style-text font-bold">03</span> Надёжный сервис</span>
-        <div class="border-t-2 border-black text-lg mt-4 pt-2">
-          Круглосуточный мониторинг вашего бизнеса, быстрое и надежное уведомления, позволяющие повысить скорость работы с клиентом
-        </div>
-      </div>
-      <div>
-        <span class="font-bold text-3xl"><span class="rg-style-text font-bold">04</span> Доступное решение</span>
-        <div class="border-t-2 border-black text-lg mt-4 pt-2">
-          Ценообразнование, позволяющие любому приложению расшиить свои возможнотси и использовать весь спектр наших услуг  на полную!!!
+          {{description.description}}
         </div>
       </div>
     </div>
@@ -52,15 +34,13 @@
       <div class="bg-gray-700 rounded-3xl text-white text-center p-8 text-3xl">
         Сервисы, с которыми мы работаем:
         <div class="pt-4 mt-4 border-t-4 border-color grid grid-cols-3 gap-16 max-h-full">
-          <img class="max-h-32" src="./../../assets/images/services-logos/googleplay.png" alt="Google Play">
-          <img class="max-h-32" src="./../../assets/images/services-logos/appstore.png" alt="App Store">
-          <img class="max-h-32" src="./../../assets/images/services-logos/appgallery.png" alt="AppGallery">
+          <img *ngFor="let service of Services" class="max-h-32" src="{{service.image_url}}" alt="{{service.name}}">
         </div>
       </div>
       <div class="bg-gray-700 rounded-3xl text-white text-center p-8 text-3xl">
         Интеграции:
         <div class="pt-4 mt-4 border-t-4 border-color">
-          <img class="max-h-32 mx-auto my-auto" src="./../../assets/images/services-logos/slack.png" alt="">
+          <img *ngFor="let integration of Integrations" class="max-h-32 mx-auto my-auto" src="{{integration.image_url}}" alt="{{integration.name}}">
         </div>
       </div>
     </div>
