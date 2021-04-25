@@ -1,6 +1,6 @@
 import { Description } from "./../description";
 
-export const WhatIsReviewGator : Description[] =
+export const WhatIsReviewGator: Description[] =
 [
     {
         title: "Ваш помощник",
