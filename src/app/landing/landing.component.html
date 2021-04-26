@@ -1,10 +1,11 @@
 <landing-header></landing-header>
 <body class="montserrat">
-  <div class="carousel h-screen">
-    <div *ngFor="let slide of Slides;let i = index" class="h-screen bg-container"
-         [ngClass]="{faded:(i===currentSlide)}">
-      <img src="{{slide.img}}"
-           class="h-screen w-screen object-cover">
+  <div class="h-screen">
+    <div class="carousel">
+      <div *ngFor="let slide of Slides;let i = index" class="h-screen bg-container"
+      [ngClass]="{faded:(i===currentSlide)}">
+      <video src="../../assets/video/landing/background.mp4"
+      class="h-screen w-screen object-cover" autoplay loop></video>
       <div class="bg-content">
         <div class="text-white centered w-5/6 md:w-3/5 text-2xl sm:text-6xl font-bold">
           {{slide.text}}
@@ -13,6 +14,7 @@
           Присоединиться
         </button>
       </div>
+    </div>
     </div>
   </div>
   <div class="p-4 sm:p-36 pt-28" id="what-we-do">

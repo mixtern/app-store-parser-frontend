@@ -14,8 +14,9 @@ export class LandingComponent{
   WhatIsReviewGator = WhatIsReviewGator;
   Services = Services;
   Integrations = Integrations;
+
   currentSlide = 1;
-  SlideInterval = 5000;
+  SlideInterval = 7000;
   Slides = [
     {
       img: '/assets/images/landing/pexels-daria-shevtsova-3626622.jpg',
@@ -37,6 +38,6 @@ export class LandingComponent{
   }
 
   constructor() {
-    setInterval(() => this.nextSlide(), 5000);
+    setInterval(() => this.nextSlide(), 7000);
   }
 }
