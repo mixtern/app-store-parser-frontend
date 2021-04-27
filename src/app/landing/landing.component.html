@@ -2,7 +2,7 @@
 <body class="montserrat">
   <div class="h-screen carousel">
       <div class="bg-container">
-        <video class="h-screen w-screen object-cover" autoplay muted loop>
+        <video class="h-screen w-screen object-cover" autoplay muted loop oncanplay="this.play()" onloadedmetadata="this.muted = true">
           <source src="../../assets/video/landing/background.mp4">
         </video>
         <div class="bg-content">
