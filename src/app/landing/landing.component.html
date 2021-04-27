@@ -1,15 +1,13 @@
 <landing-header></landing-header>
-<body class="montserrat">
-<div class="h-screen">
-  <div class="carousel">
-    <div class="h-screen bg-container">
-      <video src="../../assets/video/landing/background.mp4"
-             class="h-screen w-screen object-cover" autoplay muted loop></video>
-    </div>
-    <div class="h-screen w-screen bg-container">
-      <div class="bg-content">
-        <div *ngFor="let slide of Slides;let i = index" class="bg-content-text text-white centered w-5/6 md:w-3/5 text-2xl sm:text-6xl font-bold"
-             [ngClass]="{faded:(i===currentSlide)}">
+<body class="montserrat w-full overflow-x-hidden">
+  <div class="h-screen carousel">
+      <div class="h-screen bg-container">
+        <video class="h-screen w-screen object-cover" autoplay muted loop>
+          <source src="../../assets/video/landing/background.mp4">
+        </video>
+        <div class=" h-screen w-screen  bg-content">
+          <div *ngFor="let slide of Slides;let i = index" class="bg-content-text text-white centered w-5/6 md:w-3/5 text-2xl sm:text-6xl font-bold"
+          [ngClass]="{faded:(i===currentSlide)}">
           {{slide.text}}
         </div>
         <button class="bg-gradient-to-b join-button rg-color-gradient px-5 py-4 rounded-full text-white">
@@ -18,72 +16,71 @@
       </div>
     </div>
   </div>
-</div>
-<div class="p-4 sm:p-36 pt-28" id="what-we-do">
-  <div class="text-5xl mb-24">
-    Что такое <span class="rg-style-text">ReviewGator</span>?
-  </div>
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-24 mb-32">
-    <div *ngFor="let description of WhatIsReviewGator; let i = index">
-      <span class="font-bold text-3xl"><span
-        class="rg-style-text">{{i > 9 ? "" : "0"}}{{i + 1}}</span> {{description.title}}</span>
-      <div class="border-t-2 border-black text-lg mt-4 pt-2">
-        {{description.description}}
+  <div class="p-4 sm:p-36 pt-28" id="what-we-do">
+    <div class="text-5xl mb-24">
+      Что такое <span class="rg-style-text">ReviewGator</span>?
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-24 mb-32">
+      <div *ngFor="let description of WhatIsReviewGator; let i = index">
+        <span class="font-bold text-3xl"><span
+          class="rg-style-text">{{i > 9 ? "" : "0"}}{{i + 1}}</span> {{description.title}}</span>
+        <div class="border-t-2 border-black text-lg mt-4 pt-2">
+          {{description.description}}
+        </div>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-24 mb-16">
+      <img src="./../../assets/images/landing/photo-of-person-holding-mobile-phone-3183153.jpg" alt="">
+      <div class="text-3xl leading-relaxed self-center">
+        Доступ каждого бизнеса к его собранным данным, и свобода реализации своей собственной аналитики
+      </div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-24">
+      <div class="bg-gray-700 rounded-3xl text-white text-center p-8 text-3xl">
+        Сервисы, с которыми мы работаем:
+        <div class="pt-4 mt-4 border-t-4 border-color grid grid-cols-3 gap-16 max-h-full">
+          <img *ngFor="let service of Services" class="max-h-32" src="{{service.image_url}}" alt="{{service.name}}">
+        </div>
+      </div>
+      <div class="bg-gray-700 rounded-3xl text-white text-center p-8 text-3xl">
+        Интеграции:
+        <div class="pt-4 mt-4 border-t-4 border-color">
+          <img *ngFor="let integration of Integrations" class="max-h-32 mx-auto my-auto" src="{{integration.image_url}}"
+              alt="{{integration.name}}">
+        </div>
       </div>
     </div>
   </div>
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-24 mb-16">
-    <img src="./../../assets/images/landing/photo-of-person-holding-mobile-phone-3183153.jpg" alt="">
-    <div class="text-3xl leading-relaxed self-center">
-      Доступ каждого бизнеса к его собранным данным, и свобода реализации своей собственной аналитики
+  <div class="sm:p-36 sm:pt-28" id="what-we-can-do">
+    <div class="text-center text-5xl mb-11">
+      Наши услуги:
+    </div>
+    <div class="text-center text-4xl pb-10">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+      <div class="bg-gray-700 h-40"></div>
+      <div class="bg-gray-700 h-40"></div>
+      <div class="bg-gray-700 h-40"></div>
+      <div class="bg-gray-700 h-40"></div>
+      <div class="bg-gray-700 h-40"></div>
+      <div class="bg-gray-700 h-40"></div>
+      <div class="bg-gray-700 h-40"></div>
+      <div class="bg-gray-700 h-40"></div>
     </div>
   </div>
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-24">
-    <div class="bg-gray-700 rounded-3xl text-white text-center p-8 text-3xl">
-      Сервисы, с которыми мы работаем:
-      <div class="pt-4 mt-4 border-t-4 border-color grid grid-cols-3 gap-16 max-h-full">
-        <img *ngFor="let service of Services" class="max-h-32" src="{{service.image_url}}" alt="{{service.name}}">
+  <div class="text-gray-400 bg-gray-800 pt-14 pb-10 text-center" id="about-us">
+    <span class=" text-base">Свяжитесь с нами:</span>
+    <img class="h-48 mx-auto" src="./../../assets/images/logo.png" alt="Logo">
+    <div class="">
+      Наша команда:
+      <div class="flex justify-center mx-auto pt-4">
+        <div *ngFor="let member of OurTeam" class="px-4">
+          <img class="object-cover mx-auto h-12 w-12 rounded-full" src="{{member.image_url}}" alt="{{member.name}}">
+          <span>{{member.name}}</span>
+        </div>
       </div>
     </div>
-    <div class="bg-gray-700 rounded-3xl text-white text-center p-8 text-3xl">
-      Интеграции:
-      <div class="pt-4 mt-4 border-t-4 border-color">
-        <img *ngFor="let integration of Integrations" class="max-h-32 mx-auto my-auto" src="{{integration.image_url}}"
-             alt="{{integration.name}}">
-      </div>
-    </div>
+    <div class="text-gray-500 text-sm pt-16">Мы любим наших пользователей<br>❤</div>
   </div>
-</div>
-<div class="sm:p-36 sm:pt-28" id="what-we-can-do">
-  <div class="text-center text-5xl mb-11">
-    Наши услуги:
-  </div>
-  <div class="text-center text-4xl pb-10">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-  </div>
-  <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-    <div class="bg-gray-700 h-40"></div>
-    <div class="bg-gray-700 h-40"></div>
-    <div class="bg-gray-700 h-40"></div>
-    <div class="bg-gray-700 h-40"></div>
-    <div class="bg-gray-700 h-40"></div>
-    <div class="bg-gray-700 h-40"></div>
-    <div class="bg-gray-700 h-40"></div>
-    <div class="bg-gray-700 h-40"></div>
-  </div>
-</div>
-<div class="text-gray-400 bg-gray-800 pt-14 pb-10 text-center" id="about-us">
-  <span class=" text-base">Свяжитесь с нами:</span>
-  <img class="h-48 mx-auto" src="./../../assets/images/logo.png" alt="Logo">
-  <div class="">
-    Наша команда:
-    <div class="flex justify-center mx-auto pt-4">
-      <div *ngFor="let member of OurTeam" class="px-4">
-        <img class="object-cover mx-auto h-12 w-12 rounded-full" src="{{member.image_url}}" alt="{{member.name}}">
-        <span>{{member.name}}</span>
-      </div>
-    </div>
-  </div>
-  <div class="text-gray-500 text-sm pt-16">Мы любим наших пользователей<br>❤</div>
-</div>
 </body>
