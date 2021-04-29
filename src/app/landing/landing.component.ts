@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Integrations } from 'src/shared/landing/integrations';
 import { Services } from 'src/shared/landing/services';
+import { Slides } from 'src/shared/landing/slides';
 import { WhatIsReviewGator } from 'src/shared/landing/what-is-rg';
 import { OurTeam } from './../../shared/landing/our-team';
 
@@ -17,18 +18,7 @@ export class LandingComponent{
 
   currentSlide = 1;
   SlideInterval = 7000;
-  Slides = [
-    {
-      img: '/assets/images/landing/pexels-daria-shevtsova-3626622.jpg',
-      text: 'ReviewGator - ваш помощник для мониторинга отзывов',
-      subtext: 'Пришло время перенести ответсвенность!'
-    },
-    {
-      img: '/assets/images/landing/pexels-fauxels-3183197.jpg',
-      text: 'Расширь свои возможности по доступным ценам',
-      subtext: 'Меняй свой бизнес к лучшему!'
-    }
-    ];
+  Slides = Slides;
 
   nextSlide(): void {
     this.currentSlide++;

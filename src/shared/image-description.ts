@@ -1,4 +1,5 @@
 export class ImageDescription {
-    name: string;
-    image_url: string;
+    title: string;
+    image?: string;
+    description?: string;
 }

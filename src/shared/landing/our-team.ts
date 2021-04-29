@@ -3,23 +3,23 @@ import { ImageDescription } from "./../image-description";
 export const OurTeam : ImageDescription[] =
 [
     {
-        name: "Nikita",
-        image_url: "./../../assets/images/avatars/Nikita.jpg"
+        title: "Nikita",
+        image: "./../../assets/images/avatars/Nikita.jpg"
     },
     {
-        name: "Daniella",
-        image_url: "./../../assets/images/avatars/Daniella.jpg"
+        title: "Daniella",
+        image: "./../../assets/images/avatars/Daniella.jpg"
     },
     {
-        name: "Ilya",
-        image_url: "./../../assets/images/avatars/Ilya.jpg"
+        title: "Ilya",
+        image: "./../../assets/images/avatars/Ilya.jpg"
     },
     {
-        name: "Oleg",
-        image_url: "./../../assets/images/avatars/Oleg.jpg"
+        title: "Oleg",
+        image: "./../../assets/images/avatars/Oleg.jpg"
     },
     {
-        name: "Rodion",
-        image_url: "./../../assets/images/avatars/Rodion.jpg"
+        title: "Rodion",
+        image: "./../../assets/images/avatars/Rodion.jpg"
     }
 ]

@@ -3,15 +3,15 @@ import { ImageDescription } from "./../image-description";
 export const Services : ImageDescription[] =
 [
     {
-        name: "Google Play",
-        image_url: "./../../assets/images/services-logos/googleplay.png"
+        title: "Google Play",
+        image: "./../../assets/images/services-logos/googleplay.png"
     },
     {
-        name: "App Store",
-        image_url: "./../../assets/images/services-logos/appstore.png"
+        title: "App Store",
+        image: "./../../assets/images/services-logos/appstore.png"
     },
     {
-        name: "AppGallery",
-        image_url: "./../../assets/images/services-logos/appgallery.png"
+        title: "AppGallery",
+        image: "./../../assets/images/services-logos/appgallery.png"
     }
 ]
