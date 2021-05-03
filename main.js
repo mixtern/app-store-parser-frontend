@@ -66,7 +66,7 @@ __webpack_require__.r(__webpack_exports__);
 const Integrations = [
     {
         title: "Slack",
-        image: "./../../app-store-parser-frontend/assets/images/services-logos/slack.png"
+        image: "/app-store-parser-frontend/assets/images/services-logos/slack.png"
     }
 ];
 
@@ -91,7 +91,7 @@ class LandingHeaderComponent {
     }
 }
 LandingHeaderComponent.ɵfac = function LandingHeaderComponent_Factory(t) { return new (t || LandingHeaderComponent)(); };
-LandingHeaderComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: LandingHeaderComponent, selectors: [["landing-header"]], decls: 18, vars: 0, consts: [[1, "bg-white", "container", "mx-auto", "fixed", "z-10", "montserrat"], [1, "flex", "justify-between", "items-center", "h-14", "border-b", "w-screen"], [1, "flex", "items-center", "text-blue-500"], ["href", "./", 1, "mr-4"], ["src", "./../../app-store-parser-frontend/assets/images/logo.png", "alt", "Logo", 1, "h-14", "object-cover"], [1, "hidden", "md:block"], ["href", "#what-we-do", 1, "mx-4"], ["href", "#what-we-can-do", 1, "mx-4"], ["href", "#about-us", 1, "mx-4"], [1, "flex", "items-center"], [1, "mx-2", "bg-white", "border-2", "rounded-md", "border-blue-500", "text-blue-500"], [1, "mx-2", "mr-8", "bg-blue-500", "border-2", "rounded-md", "border-blue-500", "text-white"], [1, "h-14"]], template: function LandingHeaderComponent_Template(rf, ctx) { if (rf & 1) {
+LandingHeaderComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: LandingHeaderComponent, selectors: [["landing-header"]], decls: 18, vars: 0, consts: [[1, "bg-white", "container", "mx-auto", "fixed", "z-10", "montserrat"], [1, "flex", "justify-between", "items-center", "h-14", "border-b", "w-screen"], [1, "flex", "items-center", "text-blue-500"], ["href", "./", 1, "mr-4"], ["src", "/app-store-parser-frontend/assets/images/logo.png", "alt", "Logo", 1, "h-14", "object-cover"], [1, "hidden", "md:block"], ["href", "#what-we-do", 1, "mx-4"], ["href", "#what-we-can-do", 1, "mx-4"], ["href", "#about-us", 1, "mx-4"], [1, "flex", "items-center"], [1, "mx-2", "bg-white", "border-2", "rounded-md", "border-blue-500", "text-blue-500"], [1, "mx-2", "mr-8", "bg-blue-500", "border-2", "rounded-md", "border-blue-500", "text-white"], [1, "h-14"]], template: function LandingHeaderComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -167,15 +167,15 @@ __webpack_require__.r(__webpack_exports__);
 const Services = [
     {
         title: "Google Play",
-        image: "./../../app-store-parser-frontend/assets/images/services-logos/googleplay.png"
+        image: "/app-store-parser-frontend/assets/images/services-logos/googleplay.png"
     },
     {
         title: "App Store",
-        image: "./../../app-store-parser-frontend/assets/images/services-logos/appstore.png"
+        image: "/app-store-parser-frontend/assets/images/services-logos/appstore.png"
     },
     {
         title: "AppGallery",
-        image: "./../../app-store-parser-frontend/assets/images/services-logos/appgallery.png"
+        image: "/app-store-parser-frontend/assets/images/services-logos/appgallery.png"
     }
 ];
 
@@ -195,23 +195,23 @@ __webpack_require__.r(__webpack_exports__);
 const OurTeam = [
     {
         title: "Nikita",
-        image: "./../../app-store-parser-frontend/assets/images/avatars/Nikita.jpg"
+        image: "/app-store-parser-frontend/assets/images/avatars/Nikita.jpg"
     },
     {
         title: "Daniella",
-        image: "./../../app-store-parser-frontend/assets/images/avatars/Daniella.jpg"
+        image: "/app-store-parser-frontend/assets/images/avatars/Daniella.jpg"
     },
     {
         title: "Ilya",
-        image: "./../../app-store-parser-frontend/assets/images/avatars/Ilya.jpg"
+        image: "/app-store-parser-frontend/assets/images/avatars/Ilya.jpg"
     },
     {
         title: "Oleg",
-        image: "./../../app-store-parser-frontend/assets/images/avatars/Oleg.jpg"
+        image: "/app-store-parser-frontend/assets/images/avatars/Oleg.jpg"
     },
     {
         title: "Rodion",
-        image: "./../../app-store-parser-frontend/assets/images/avatars/Rodion.jpg"
+        image: "/app-store-parser-frontend/assets/images/avatars/Rodion.jpg"
     }
 ];
 
@@ -336,7 +336,7 @@ class LandingComponent {
     }
 }
 LandingComponent.ɵfac = function LandingComponent_Factory(t) { return new (t || LandingComponent)(); };
-LandingComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineComponent"]({ type: LandingComponent, selectors: [["app-landing"]], decls: 55, vars: 5, consts: [[1, "montserrat"], [1, "h-screen", "carousel"], [1, "bg-container"], ["autoplay", "", "muted", "", "loop", "", "oncanplay", "this.play()", "onloadedmetadata", "this.muted = true", 1, "h-screen", "w-screen", "object-cover"], ["src", "../../app-store-parser-frontend/assets/video/landing/background.mp4"], [1, "bg-content"], ["class", "bg-content-text text-white centered w-5/6 md:w-3/5 text-2xl sm:text-6xl font-bold", 3, "ngClass", 4, "ngFor", "ngForOf"], [1, "bg-gradient-to-b", "join-button", "rg-color-gradient", "px-5", "py-4", "rounded-full", "text-white"], ["id", "what-we-do", 1, "p-4", "sm:p-36", "pt-28"], [1, "text-5xl", "mb-24"], [1, "rg-style-text"], [1, "grid", "grid-cols-1", "sm:grid-cols-2", "gap-24", "mb-32"], [4, "ngFor", "ngForOf"], [1, "grid", "grid-cols-1", "sm:grid-cols-2", "gap-24", "mb-16"], ["src", "./../../app-store-parser-frontend/assets/images/landing/photo-of-person-holding-mobile-phone-3183153.jpg", "alt", ""], [1, "text-3xl", "leading-relaxed", "self-center"], [1, "grid", "grid-cols-1", "sm:grid-cols-2", "gap-24"], [1, "bg-gray-700", "rounded-3xl", "text-white", "text-center", "p-8", "text-3xl"], [1, "pt-4", "mt-4", "border-t-4", "border-color", "flex", "flex-wrap", "justify-around"], ["class", "max-h-32", 3, "src", "alt", 4, "ngFor", "ngForOf"], ["class", "max-h-32 mx-auto my-auto", 3, "src", "alt", 4, "ngFor", "ngForOf"], ["id", "what-we-can-do", 1, "sm:p-36", "sm:pt-28"], [1, "text-center", "text-5xl", "mb-11"], [1, "text-center", "text-4xl", "pb-10"], [1, "flex", "flex-wrap", "justify-between"], [1, "bg-gray-700", "h-40", "w-96", "m-1"], ["id", "about-us", 1, "text-gray-400", "bg-gray-800", "pt-14", "pb-10", "text-center"], [1, "text-base"], ["src", "./../../app-store-parser-frontend/assets/images/logo.png", "alt", "Logo", 1, "h-48", "mx-auto"], [1, ""], [1, "flex", "justify-center", "mx-auto", "pt-4"], ["class", "px-4", 4, "ngFor", "ngForOf"], [1, "text-gray-500", "text-sm", "pt-16"], [1, "bg-content-text", "text-white", "centered", "w-5/6", "md:w-3/5", "text-2xl", "sm:text-6xl", "font-bold", 3, "ngClass"], [1, "font-bold", "text-3xl"], [1, "border-t-2", "border-black", "text-lg", "mt-4", "pt-2"], [1, "max-h-32", 3, "src", "alt"], [1, "max-h-32", "mx-auto", "my-auto", 3, "src", "alt"], [1, "px-4"], [1, "object-cover", "mx-auto", "h-12", "w-12", "rounded-full", 3, "src", "alt"]], template: function LandingComponent_Template(rf, ctx) { if (rf & 1) {
+LandingComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineComponent"]({ type: LandingComponent, selectors: [["app-landing"]], decls: 55, vars: 5, consts: [[1, "montserrat"], [1, "h-screen", "carousel"], [1, "bg-container"], ["autoplay", "", "muted", "", "loop", "", "oncanplay", "this.play()", "onloadedmetadata", "this.muted = true", 1, "h-screen", "w-screen", "object-cover"], ["src", "../../assets/video/landing/background.mp4"], [1, "bg-content"], ["class", "bg-content-text text-white centered w-5/6 md:w-3/5 text-2xl sm:text-6xl font-bold", 3, "ngClass", 4, "ngFor", "ngForOf"], [1, "bg-gradient-to-b", "join-button", "rg-color-gradient", "px-5", "py-4", "rounded-full", "text-white"], ["id", "what-we-do", 1, "p-4", "sm:p-36", "pt-28"], [1, "text-5xl", "mb-24"], [1, "rg-style-text"], [1, "grid", "grid-cols-1", "sm:grid-cols-2", "gap-24", "mb-32"], [4, "ngFor", "ngForOf"], [1, "grid", "grid-cols-1", "sm:grid-cols-2", "gap-24", "mb-16"], ["src", "/app-store-parser-frontend/assets/images/landing/photo-of-person-holding-mobile-phone-3183153.jpg", "alt", ""], [1, "text-3xl", "leading-relaxed", "self-center"], [1, "grid", "grid-cols-1", "sm:grid-cols-2", "gap-24"], [1, "bg-gray-700", "rounded-3xl", "text-white", "text-center", "p-8", "text-3xl"], [1, "pt-4", "mt-4", "border-t-4", "border-color", "flex", "flex-wrap", "justify-around"], ["class", "max-h-32", 3, "src", "alt", 4, "ngFor", "ngForOf"], ["class", "max-h-32 mx-auto my-auto", 3, "src", "alt", 4, "ngFor", "ngForOf"], ["id", "what-we-can-do", 1, "sm:p-36", "sm:pt-28"], [1, "text-center", "text-5xl", "mb-11"], [1, "text-center", "text-4xl", "pb-10"], [1, "flex", "flex-wrap", "justify-between"], [1, "bg-gray-700", "h-40", "w-96", "m-1"], ["id", "about-us", 1, "text-gray-400", "bg-gray-800", "pt-14", "pb-10", "text-center"], [1, "text-base"], ["src", "/app-store-parser-frontend/assets/images/logo.png", "alt", "Logo", 1, "h-48", "mx-auto"], [1, ""], [1, "flex", "justify-center", "mx-auto", "pt-4"], ["class", "px-4", 4, "ngFor", "ngForOf"], [1, "text-gray-500", "text-sm", "pt-16"], [1, "bg-content-text", "text-white", "centered", "w-5/6", "md:w-3/5", "text-2xl", "sm:text-6xl", "font-bold", 3, "ngClass"], [1, "font-bold", "text-3xl"], [1, "border-t-2", "border-black", "text-lg", "mt-4", "pt-2"], [1, "max-h-32", 3, "src", "alt"], [1, "max-h-32", "mx-auto", "my-auto", 3, "src", "alt"], [1, "px-4"], [1, "object-cover", "mx-auto", "h-12", "w-12", "rounded-full", 3, "src", "alt"]], template: function LandingComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelement"](0, "landing-header");
         _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementStart"](1, "body", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementStart"](2, "div", 1);
