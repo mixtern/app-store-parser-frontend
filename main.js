@@ -66,7 +66,7 @@ __webpack_require__.r(__webpack_exports__);
 const Integrations = [
     {
         title: "Slack",
-        image: "./../../app-store-parser-frontend/assets/images/services-logos/slack.png"
+        image: "./../../assets/images/services-logos/slack.png"
     }
 ];
 
