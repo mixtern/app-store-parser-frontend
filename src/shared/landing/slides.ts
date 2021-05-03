@@ -3,7 +3,7 @@ import { ImageDescription } from "./../image-description";
 export const Slides : ImageDescription[] =
 [
     {
-        title: "ReviewGator - ваш помощник\nдля мониторинга отзывов",
+        title: "ReviewGator - ваш помощник для мониторинга отзывов",
         description: "Пришло время перенести ответсвенность!",
         image: "bg-blue-400"
     },
@@ -23,7 +23,7 @@ export const Slides : ImageDescription[] =
         image: "bg-yellow-400"
     },
     {
-        title: "До сих пор не с нами?\nЧего ты ждешь?",
+        title: "До сих пор не с нами? Чего ты ждешь?",
         description: "Присоединяйся!",
         image: "bg-yellow-200"
     }
