@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "deploy": "ng build --prod --base-href=https://mixtern.github.io/app-store-parser-frontend/ && node .\\fix-gh-pages-urls.js && ng deploy --no-build",
+    "deploy": "ng deploy --base-href=https://mixtern.github.io/app-store-parser-frontend/",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build:prod": "cross-env NODE_ENV=production ng build --prod"
