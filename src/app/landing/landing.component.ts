@@ -17,7 +17,6 @@ export class LandingComponent{
   Integrations = Integrations;
 
   currentSlide = 1;
-  SlideInterval = 7000;
   Slides = Slides;
 
   nextSlide(): void {
@@ -28,6 +27,6 @@ export class LandingComponent{
   }
 
   constructor() {
-    setInterval(() => this.nextSlide(), 7000);
+    setInterval(() => this.nextSlide(), 6000);
   }
 }

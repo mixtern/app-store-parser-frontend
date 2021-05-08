@@ -24,7 +24,7 @@
 
 .centered {
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -42,4 +42,26 @@
 
 .text-outline {
     text-shadow: 2px 2px 0 #000a;
+}
+
+.decor-container {
+    position: relative;
+}
+
+.decor-1 {
+    position: absolute;
+    top: -100px;
+    right: 100px;
+}
+
+.decor-2 {
+    position: absolute;
+    top: -150px;
+    left: -150px;
+}
+
+.decor-3 {
+    position: absolute;
+    top: -200px;
+    right: -100px;
 }
