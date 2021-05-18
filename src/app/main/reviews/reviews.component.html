@@ -1,8 +1,8 @@
-<div>
-  <div class="flex flex-wrap justify-around mx-16 items-center">
-    <span>Фильтры:</span>
+<body class="bg-blue-300 h-screen montserrat pt-8">
+  <div class="flex flex-wrap justify-around mx-16 items-center bg-white rounded-2xl mb-8 h-16">
+    <span class="font-bold">Фильтры:</span>
     <div class="mx-4">
-      <label class="pr-4" for="review-agregator">Агрегатор</label>
+      <label class="pr-4" for="review-agregator">Агрегатор: </label>
       <select id="review-argegator">
         <option>Pen</option>
         <option>Pineapple</option>
@@ -10,41 +10,33 @@
       </select>
     </div>
     <div class="mx-4">
-      <label class="pr-4" for="review-language">Язык отзывов</label>
+      <label class="pr-4" for="review-language">Язык отзывов: </label>
       <select id="review-language">
         <option>Русский</option>
         <option>Английский</option>
       </select>
     </div>
     <div>
-      Дата
+      Дата: 
       <div>
         Тут настройки даты
       </div>
     </div>
   </div>
 
-  <div class="grid grid-cols-3 mx-32">
-    <div>
-      Приложения
-      <div>
-        Приложение
+  <div class="grid grid-cols-3 mx-32 gap-16 h-5/6">
+    <div class="bg-white rounded-2xl p-2 flex flex-col items-center">
+      <div class="font-bold mb-4">Приложения</div>
+      <div >
+        <div *ngFor="let item of items" class="w-11/12 rounded-xl flex items-center overflow-hidden mb-4 bg-gray-100">
+          <div class="bg-gray-500 h-12 w-12 mr-4">{{app}}</div>
+            Приложение
+        </div>
       </div>
-      <div>
-        Приложение
-      </div>
-      <div>
-        Приложение
-      </div>
-      <div>
-        Приложение
-      </div>
-      <div>
-        +
-      </div>
+      <button class="mt-auto bg-gradient-to-b join-button rg-color-gradient w-11/12 rounded-full text-white">+</button>
     </div>
-    <div class="col-span-2">
-      Отзывы
+    <div class="col-span-2 bg-white rounded-2xl p-2">
+      <div class="font-bold text-center">Отзывы</div>
       <div>
         Отзыв
       </div>
@@ -62,4 +54,4 @@
       </div>
     </div>
   </div>
-</div>
+</body>
