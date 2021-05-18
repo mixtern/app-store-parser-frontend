@@ -17,10 +17,7 @@
       </select>
     </div>
     <div>
-      Дата: 
-      <div>
-        Тут настройки даты
-      </div>
+      <label class="pr-4" for="review-date">Дата: </label><input type="date" id="review-date">
     </div>
   </div>
 
@@ -34,7 +31,7 @@
       <div *ngIf="!Apps.length" class="text-center opacity-30">
         Кажется, у вас пока нету приложений. Попробуйте добавить их с помощью кнопки "+" внизу.
       </div>
-      <button class="mt-auto bg-gradient-to-b join-button rg-color-gradient w-11/12 rounded-full text-white">+</button>
+      <button class="mt-auto"><img src="./assets/images/main/plus.svg" alt=""></button>
     </div>
     <div class="col-span-2 bg-white rounded-2xl p-2 flex flex-col items-center">
       <div class="font-bold mb-4">Отзывы</div>
