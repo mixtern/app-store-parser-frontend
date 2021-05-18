@@ -27,29 +27,28 @@
   <div class="grid grid-cols-3 mx-32 gap-16 h-5/6">
     <div class="bg-white rounded-2xl p-2 flex flex-col items-center">
       <div class="font-bold mb-4">Приложения</div>
-      <div >
-        <div *ngFor="let item of items" class="w-11/12 rounded-xl flex items-center overflow-hidden mb-4 bg-gray-100">
-          <div class="bg-gray-500 h-12 w-12 mr-4">{{app}}</div>
-            Приложение
-        </div>
+      <button *ngFor="let app of Apps" class="w-11/12 rounded-xl flex items-center overflow-hidden mb-4 bg-gray-100">
+        <div class="bg-gray-500 h-12 w-12 mr-4"></div>
+          Приложение
+      </button>
+      <div *ngIf="!Apps.length" class="text-center opacity-30">
+        Кажется, у вас пока нету приложений. Попробуйте добавить их с помощью кнопки "+" внизу.
       </div>
       <button class="mt-auto bg-gradient-to-b join-button rg-color-gradient w-11/12 rounded-full text-white">+</button>
     </div>
-    <div class="col-span-2 bg-white rounded-2xl p-2">
-      <div class="font-bold text-center">Отзывы</div>
-      <div>
-        Отзыв
+    <div class="col-span-2 bg-white rounded-2xl p-2 flex flex-col items-center">
+      <div class="font-bold mb-4">Отзывы</div>
+      <div *ngFor="let review of Reviews" class="w-11/12 rounded-xl p-2 mb-4 bg-gray-100">
+        <div>Пользователь пишет:</div>
+        <div class="pl-4">ипущиуащшипшущишщпуипшщ</div>
       </div>
-      <div>
-        Отзыв
+      <div *ngIf="!Reviews.length" class="text-center opacity-50">
+        Выберите приложение из списка слева.
       </div>
-      <div>
-        Отзыв
+      <div *ngIf="!Reviews.length" class="text-center opacity-50">
+        Пока что отзывов нет... Внимательно следим за их появлением!
       </div>
-      <div>
-        Отзыв
-      </div>
-      <div>
+      <div class="mt-auto">
         1 2 ... 99
       </div>
     </div>
