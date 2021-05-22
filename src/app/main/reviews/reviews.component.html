@@ -59,22 +59,7 @@
     </div>
   </div>
   
-  <div class="add-app-modal bg-white rounded-3xl p-8">
-    <div class="flex justify-end">
-      <button (click)="openAddAppModal()"><img src="./assets/images/main/x.svg" alt=""></button>
-    </div>
-    <div>
-      <label for="app-link">Вставьте ссылку на <span class="font-bold">приложение</span>:</label>
-      <br>
-      <input id="app-link" type="text" class="rounded-3xl mt-2 mb-8 w-full">
-      <br>
-      <label for="slack-link">Вставьте ссылку на <span class="font-bold">Slack</span>:</label>
-      <br>
-      <input id="slack-link" type="text" class="rounded-3xl mt-2 mb-8 w-full">
-    </div>
-    <div class="flex justify-end">
-      <div class="mx-4 text-blue-400">Сохранить</div><div class="mx-4 text-blue-400"><button (click)="openAddAppModal()">Отменить</button></div>
-    </div>
-  </div>
+  <app-app-config-modal>
+  </app-app-config-modal>
 
 </body>
