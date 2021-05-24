@@ -1,6 +1,7 @@
 import { Component, Inject, Injectable, Input } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { AppConfigService } from './app-config.service';
+import { ReviewsBlockComponent } from "./reviews-block/reviews-block.component";
 
 import { AppConfig } from 'src/shared/main/app-config';
 
@@ -10,9 +11,12 @@ import { AppConfig } from 'src/shared/main/app-config';
   styleUrls: ['./reviews.component.scss']
 })
 export class ReviewsComponent {
-  Apps = ["a","a","a"];
-  Reviews = [["sadsa"],[],['da','dsa','asdsq']];
-  a = 0;
+  config: AppConfigService;
+  constructor (config: AppConfigService) {
+    this.config = config;
+  }
+  
+  currentAppId = 0;
 
   openAddAppModal() {
     let modal = document.querySelector(".add-app-modal");

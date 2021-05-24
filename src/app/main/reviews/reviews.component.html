@@ -27,40 +27,25 @@
     <div class="bg-white rounded-2xl p-2 flex flex-col items-center">
       <div class="font-bold mb-4">Приложения</div>
 
-      <button *ngFor="let app of Apps" class="w-11/12 rounded-xl flex items-center overflow-hidden mb-4 bg-gray-100">
+      <button *ngFor="let app of this.config.apps" class="w-11/12 rounded-xl flex items-center overflow-hidden mb-4 bg-gray-100">
         <img src="./assets/images/main/example/app-icon.svg" class="h-12 w-12 mr-4">
-          Приложение
+          {{app.name}}
       </button>
       
-      <div *ngIf="!Apps.length" class="text-center opacity-30">
+      <div *ngIf="!this.config.apps.length" class="text-center opacity-30">
         Кажется, у вас пока нету приложений. Попробуйте добавить их с помощью кнопки "+" внизу.
       </div>
       <button class="mt-auto mb-4" (click)="openAddAppModal()"><img src="./assets/images/main/plus.svg" alt=""></button>
     </div>
     <div class="col-span-2 bg-white rounded-2xl p-2 flex flex-col items-center">
-      <div class="font-bold mb-4">Отзывы</div>
-
-      <div *ngFor="let review of Reviews" class="w-11/12 rounded-xl p-2 mb-4 bg-gray-100">
-        <div class="flex"><img src="./assets/images/main/example/user-avatar.svg" class="h-4 rounded-full my-auto bg-white">Пользователь пишет:</div>
-        <div class="pl-4">ипущиуащшипшущишщпуипшщ</div>
-      </div>
-
-      <div *ngIf="!Reviews.length" class="text-center opacity-50">
-        Выберите приложение из списка слева.
-      </div>
-
-      <div *ngIf="!Reviews.length" class="text-center opacity-50">
-        Пока что отзывов нет... Внимательно следим за их появлением!
-      </div>
-
-      <div class="mt-auto">
-        1 2 ... 99
-      </div>
+      <app-reviews-block
+      [AppId]="currentAppId">
+      </app-reviews-block>
     </div>
   </div>
   
   <app-app-config-modal
-  [AppId]="a">
+  [AppId]="currentAppId">
   </app-app-config-modal>
 
 </body>
