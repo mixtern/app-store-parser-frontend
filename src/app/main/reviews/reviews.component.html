@@ -1,4 +1,4 @@
-<landing-header></landing-header>
+<main-header></main-header>
 <body class="bg-blue-300 montserrat pt-2">
   <div class="flex flex-wrap justify-around mx-16 items-center bg-white rounded-2xl mb-4 h-16">
     <span class="font-bold">Фильтры:</span>
@@ -28,7 +28,7 @@
       <div class="font-bold mb-4">Приложения</div>
 
       <button *ngFor="let app of Apps" class="w-11/12 rounded-xl flex items-center overflow-hidden mb-4 bg-gray-100">
-        <div class="bg-gray-500 h-12 w-12 mr-4"></div>
+        <img src="./assets/images/main/example/app-icon.svg" class="h-12 w-12 mr-4">
           Приложение
       </button>
       
@@ -41,7 +41,7 @@
       <div class="font-bold mb-4">Отзывы</div>
 
       <div *ngFor="let review of Reviews" class="w-11/12 rounded-xl p-2 mb-4 bg-gray-100">
-        <div>Пользователь пишет:</div>
+        <div class="flex"><img src="./assets/images/main/example/user-avatar.svg" class="h-4 rounded-full my-auto bg-white">Пользователь пишет:</div>
         <div class="pl-4">ипущиуащшипшущишщпуипшщ</div>
       </div>
 
@@ -59,7 +59,8 @@
     </div>
   </div>
   
-  <app-app-config-modal>
+  <app-app-config-modal
+  [AppId]="a">
   </app-app-config-modal>
 
 </body>

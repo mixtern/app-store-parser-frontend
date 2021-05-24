@@ -1,7 +1,7 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, config } from 'rxjs';
 import { AppConfig } from 'src/shared/main/app-config';
-import { AppConfigService } from '../app-config.service';
+import { AppConfigService, App } from '../app-config.service';
 
 @Component({
   selector: 'app-app-config-modal',
@@ -10,20 +10,33 @@ import { AppConfigService } from '../app-config.service';
 })
 
 export class AppConfigModalComponent implements OnInit {
-  r:AppConfigService;
-  constructor(t:AppConfigService) { this.r = t; }
+  @Input () AppId: number;
+  config:AppConfigService;
+  constructor(t:AppConfigService) { this.config = t; }
+
+  get currentApp () {
+    return this.config.apps[this.currentAppIndex];
+  }
+  set currentApp (value: App) {
+    this.config.apps[this.currentAppIndex] = value;
+  };
+
+  private get currentAppIndex () {
+    return this.config.apps.findIndex(x => x.id === this.AppId);
+  }
 
   ngOnInit() {
   }
 
   openAddAppModal() {
-    
     let modal = document.querySelector(".add-app-modal");
     modal.classList.toggle("hidden");
+  }
 
-    let link = modal.querySelector("[id=\"app-link\"]");
-    console.log(link);
-    console.log(link.textContent);
-    link.textContent = "";
+  saveApp() {
+    let appLink = (document.getElementById("app-link") as HTMLInputElement).value;
+    let slackLink = (document.getElementById("slack-link") as HTMLInputElement).value;
+    this.currentApp = {id: this.AppId, appLink, slackLink};
+    this.openAddAppModal();
   }
 }
