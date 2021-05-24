@@ -1,18 +1,20 @@
-<div class="font-bold mb-4">Отзывы</div>
+<div class="flex flex-col items-center h-full w-full">
+  <div class="font-bold mb-4">Отзывы</div>
 
-<div *ngFor="let review of Reviews" class="w-11/12 rounded-xl p-2 mb-4 bg-gray-100">
-  <div class="flex"><img src="./assets/images/main/example/user-avatar.svg" class="h-4 rounded-full my-auto bg-white">{{review.username}} пишет:</div>
-  <div class="pl-4">{{review.text}}</div>
-</div>
+  <div *ngFor="let review of Reviews" class="w-11/12 rounded-xl p-2 mb-4 bg-gray-100">
+    <div class="flex"><img src="./assets/images/main/example/user-avatar.svg" class="h-4 rounded-full my-auto bg-white">{{review.username}} пишет:</div>
+    <div class="pl-4">{{review.text}}</div>
+  </div>
 
-<div *ngIf="!Reviews.length" class="text-center opacity-50">
-  Выберите приложение из списка слева.
-</div>
+  <div *ngIf="!Reviews.length" class="text-center opacity-50">
+    Выберите приложение из списка слева.
+  </div>
 
-<div *ngIf="!Reviews.length" class="text-center opacity-50">
-  Пока что отзывов нет... Внимательно следим за их появлением!
-</div>
+  <div *ngIf="!Reviews.length" class="text-center opacity-50">
+    Пока что отзывов нет... Внимательно следим за их появлением!
+  </div>
 
-<div class="mt-auto">
-  1 2 ... 99
+  <div class="mt-auto">
+    1 2 ... 99
+  </div>
 </div>
