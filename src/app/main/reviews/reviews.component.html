@@ -27,7 +27,9 @@
     <div class="bg-white rounded-2xl p-2 flex flex-col items-center">
       <div class="font-bold mb-4">Приложения</div>
 
-      <button *ngFor="let app of this.config.apps" class="w-11/12 rounded-xl flex items-center overflow-hidden mb-4 bg-gray-100">
+      <button *ngFor="let app of this.config.apps"
+      class="w-11/12 rounded-xl flex items-center overflow-hidden mb-4 bg-gray-100"
+      (click)="currentAppId=app.id">
         <img src="./assets/images/main/example/app-icon.svg" class="h-12 w-12 mr-4">
           {{app.name}}
       </button>
@@ -35,7 +37,7 @@
       <div *ngIf="!this.config.apps.length" class="text-center opacity-30">
         Кажется, у вас пока нету приложений. Попробуйте добавить их с помощью кнопки "+" внизу.
       </div>
-      <button class="mt-auto mb-4" (click)="openAddAppModal()"><img src="./assets/images/main/plus.svg" alt=""></button>
+      <button class="mt-auto mb-4" (click)="openAddAppModal('new')"><img src="./assets/images/main/plus.svg" alt=""></button>
     </div>
     <div class="col-span-2 bg-white rounded-2xl p-2">
       <app-reviews-block

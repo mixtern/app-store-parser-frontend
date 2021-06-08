@@ -8,12 +8,12 @@
     </div>
 
     <div *ngIf="!Reviews.length" class="text-center opacity-50">
-      Выберите приложение из списка слева.
-    </div>
-  
-    <div *ngIf="!Reviews.length" class="text-center opacity-50">
       Пока что отзывов нет... Внимательно следим за их появлением!
     </div>
+  </div>
+
+  <div *ngIf="AppId === 'new'" class="text-center opacity-50">
+    Выберите приложение из списка слева.
   </div>
 
   <div class="mt-auto">

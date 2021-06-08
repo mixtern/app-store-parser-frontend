@@ -16,9 +16,10 @@ export class ReviewsComponent {
     this.config = config;
   }
   
-  currentAppId = "new";
+  currentAppId: number | "new" = "new";
 
-  openAddAppModal() {
+  openAddAppModal(id: number | "new") {
+    this.currentAppId = id;
     let modal = document.querySelector(".add-app-modal");
     modal.classList.toggle("hidden");
   }

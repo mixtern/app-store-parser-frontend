@@ -12,7 +12,11 @@ export class AppConfigModalComponent implements OnInit {
   appId: number;
   get isNew () : boolean {return this.AppId === "new"};
   config: AppConfigService;
-  constructor(t:AppConfigService) { this.config = t; }
+  appLink:HTMLInputElement;
+  slackLink:HTMLInputElement;
+  constructor(t:AppConfigService) {
+    this.config = t;
+  }
 
   get currentApp () {
     return this.config.apps[this.currentAppIndex];
@@ -26,18 +30,26 @@ export class AppConfigModalComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.appLink = document.getElementById("app-link") as HTMLInputElement;
+    this.slackLink = document.getElementById("slack-link") as HTMLInputElement;
+  }
+
+  resetForm() {
+    this.appLink.value = "";
+    this.slackLink.value = "";
   }
 
   openAddAppModal() {
+    this.resetForm();
     let modal = document.querySelector(".add-app-modal");
     modal.classList.toggle("hidden");
   }
 
   saveApp() {
-    let appLink = (document.getElementById("app-link") as HTMLInputElement).value;
-    let slackLink = (document.getElementById("slack-link") as HTMLInputElement).value;
+    let appLink = this.appLink.value;
+    let slackLink = this.slackLink.value;
     if (this.isNew) {
-      this.config.createApp(Math.round(Math.random()*Number.MAX_SAFE_INTEGER), appLink, "new gfae");
+      this.config.createApp(Math.round(Math.random()*Number.MAX_SAFE_INTEGER), appLink, slackLink);
     }
     else {
       this.currentApp = {id: this.appId, appLink, slackLink};
