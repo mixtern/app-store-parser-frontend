@@ -32,6 +32,11 @@
       (click)="currentAppId=app.id">
         <img src="./assets/images/main/example/app-icon.svg" class="h-12 w-12 mr-4">
           {{app.name}}
+        <div class="mx-auto"></div>
+        <button (click)="openAddAppModal(app.id)">
+          
+          <img src="./assets/images/main/gear.svg">
+        </button>
       </button>
       
       <div *ngIf="!this.config.apps.length" class="text-center opacity-30">

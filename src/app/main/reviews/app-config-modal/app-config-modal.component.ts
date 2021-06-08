@@ -40,7 +40,6 @@ export class AppConfigModalComponent implements OnInit {
   }
 
   openAddAppModal() {
-    this.resetForm();
     let modal = document.querySelector(".add-app-modal");
     modal.classList.toggle("hidden");
   }
@@ -55,5 +54,6 @@ export class AppConfigModalComponent implements OnInit {
       this.currentApp = {id: this.appId, appLink, slackLink};
     }
     this.openAddAppModal();
+    this.resetForm();
   }
 }
