@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LandingComponent } from './landing/landing.component';
+import { ProfileComponent } from './main/profile/profile.component';
 import { ReviewsComponent } from './main/reviews/reviews.component';
 
 const routes: Routes = [
   { path: 'reviews', component: ReviewsComponent },
+  { path: 'profile', component: ProfileComponent },
   { path: '', pathMatch: 'full', component: LandingComponent }
 ];
 
