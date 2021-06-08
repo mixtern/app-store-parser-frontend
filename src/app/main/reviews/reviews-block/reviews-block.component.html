@@ -1,8 +1,8 @@
 <div class="flex flex-col items-center h-full w-full">
   <div class="font-bold mb-4">Отзывы</div>
 
-  <div *ngIf="AppId !== 'new'" >
-    <div *ngFor="let review of Reviews" class="w-11/12 rounded-xl p-2 mb-4 bg-gray-100">
+  <div *ngIf="AppId !== 'new'" class="w-11/12">
+    <div *ngFor="let review of Reviews" class="rounded-xl p-2 mb-4 bg-gray-100">
       <div class="flex"><img src="./assets/images/main/example/user-avatar.svg" class="h-4 rounded-full my-auto bg-white">{{review.username}} пишет:</div>
       <div class="pl-4">{{review.text}}</div>
     </div>
