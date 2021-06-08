@@ -7,7 +7,7 @@ import { App, Review, AppConfigService } from '../app-config.service';
   styleUrls: ['./reviews-block.component.scss']
 })
 export class ReviewsBlockComponent implements OnInit {
-  @Input () AppId: number;
+  @Input () AppId: number | "new";
   config:AppConfigService;
   constructor(t:AppConfigService) { this.config = t; }
 

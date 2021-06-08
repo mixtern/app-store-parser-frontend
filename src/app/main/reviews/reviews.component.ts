@@ -16,7 +16,7 @@ export class ReviewsComponent {
     this.config = config;
   }
   
-  currentAppId = 0;
+  currentAppId = "new";
 
   openAddAppModal() {
     let modal = document.querySelector(".add-app-modal");

@@ -5,11 +5,11 @@
   <div>
     <label for="app-link">Вставьте ссылку на <span class="font-bold">приложение</span>:</label>
     <br>
-    <input id="app-link" type="text" class="rounded-3xl mt-2 mb-8 w-full" [value]="currentApp.appLink">
+    <input id="app-link" type="text" class="rounded-3xl mt-2 mb-8 w-full" [value]="currentApp?currentApp.appLink:''">
     <br>
     <label for="slack-link">Вставьте ссылку на <span class="font-bold">Slack</span>:</label>
     <br>
-    <input id="slack-link" type="text" class="rounded-3xl mt-2 mb-8 w-full" [value]="currentApp.slackLink">
+    <input id="slack-link" type="text" class="rounded-3xl mt-2 mb-8 w-full" [value]="currentApp?currentApp.slackLink:''">
   </div>
   <div class="flex justify-end">
     <div class="mx-4 text-blue-400"><button (click)="saveApp()">Сохранить</button></div>

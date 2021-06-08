@@ -1,6 +1,4 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
-import { BehaviorSubject, config } from 'rxjs';
-import { AppConfig } from 'src/shared/main/app-config';
+import { Component, Input, OnInit } from '@angular/core';
 import { AppConfigService, App } from '../app-config.service';
 
 @Component({
@@ -10,8 +8,10 @@ import { AppConfigService, App } from '../app-config.service';
 })
 
 export class AppConfigModalComponent implements OnInit {
-  @Input () AppId: number;
-  config:AppConfigService;
+  @Input () AppId: number | "new";
+  appId: number;
+  get isNew () : boolean {return this.AppId === "new"};
+  config: AppConfigService;
   constructor(t:AppConfigService) { this.config = t; }
 
   get currentApp () {
@@ -36,7 +36,12 @@ export class AppConfigModalComponent implements OnInit {
   saveApp() {
     let appLink = (document.getElementById("app-link") as HTMLInputElement).value;
     let slackLink = (document.getElementById("slack-link") as HTMLInputElement).value;
-    this.currentApp = {id: this.AppId, appLink, slackLink};
+    if (this.isNew) {
+      this.config.createApp(Math.round(Math.random()*Number.MAX_SAFE_INTEGER), appLink, "new gfae");
+    }
+    else {
+      this.currentApp = {id: this.appId, appLink, slackLink};
+    }
     this.openAddAppModal();
   }
 }
