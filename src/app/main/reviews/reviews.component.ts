@@ -4,7 +4,7 @@ import { AppConfigService } from './app-config.service';
 @Component({
   selector: 'app-reviews',
   templateUrl: './reviews.component.html',
-  styleUrls: ['./reviews.component.scss']
+  styleUrls: ['../main.component.scss']
 })
 export class ReviewsComponent {
   config: AppConfigService;
