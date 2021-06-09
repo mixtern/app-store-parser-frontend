@@ -18,4 +18,9 @@ export class LandingHeaderComponent implements OnInit {
     
   }
 
+  toggleNavigation() {
+    let modal = document.getElementById("navigation");
+    modal.classList.toggle("hidden");
+  }
+
 }

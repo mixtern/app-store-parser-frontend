@@ -1,16 +1,20 @@
-button {
+button.welcome {
     width: 130px;
     height: 40px;
 }
 
 button {
-    height: 40px;
+    height: 36px;
 }
 
-.headerLight {
+.header-light {
     @apply bg-white;
 }
 
-.headerDark {
+.header-dark {
     background: #2F303A;
+}
+
+.border-1 {
+    border-width: 1px;
 }
