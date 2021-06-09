@@ -3,7 +3,6 @@ import { Integrations } from 'src/shared/landing/integrations';
 import { Services } from 'src/shared/landing/services';
 import { Slides } from 'src/shared/landing/slides';
 import { WhatIsReviewGator } from 'src/shared/landing/what-is-rg';
-import { OurTeam } from './../../shared/landing/our-team';
 
 @Component({
   selector: 'app-landing',
@@ -11,7 +10,6 @@ import { OurTeam } from './../../shared/landing/our-team';
   styleUrls: ['./landing.component.scss']
 })
 export class LandingComponent{
-  OurTeam = OurTeam;
   WhatIsReviewGator = WhatIsReviewGator;
   Services = Services;
   Integrations = Integrations;

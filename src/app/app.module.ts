@@ -10,19 +10,19 @@ import { LandingHeaderComponent } from './header/header.component';
 
 import { ReviewsComponent } from './main/reviews/reviews.component';
 import { AppConfigModalComponent } from './main/reviews/app-config-modal/app-config-modal.component';
-import { MainHeaderComponent } from './main/reviews/header/header.component';
 import { ReviewsBlockComponent } from './main/reviews/reviews-block/reviews-block.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
-  declarations: [		
+  declarations: [			
     AppComponent,
       LandingComponent,
       LandingHeaderComponent,
       
       ReviewsComponent,
       AppConfigModalComponent,
-      MainHeaderComponent,
-      ReviewsBlockComponent
+      ReviewsBlockComponent,
+      FooterComponent
    ],
   imports: [
     BrowserModule,

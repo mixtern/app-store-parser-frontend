@@ -70,18 +70,5 @@
       <div class="bg-gray-700 h-40 w-96 m-1"></div>
     </div>
   </div>
-  <div class="text-gray-400 bg-gray-800 pt-14 pb-10 text-center" id="about-us">
-    <span class=" text-base">Свяжитесь с нами:</span>
-    <img class="h-48 mx-auto p-14" src="./assets/images/logo.svg" alt="Logo">
-    <div class="">
-      Наша команда:
-      <div class="flex justify-center mx-auto pt-4">
-        <div *ngFor="let member of OurTeam" class="px-4">
-          <img class="object-cover mx-auto h-12 w-12 rounded-full" src="{{member.image}}" alt="{{member.title}}">
-          <span>{{member.title}}</span>
-        </div>
-      </div>
-    </div>
-    <div class="text-gray-500 text-sm pt-16">Мы любим наших пользователей<br>❤</div>
-  </div>
+  <app-footer></app-footer>
 </body>
