@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { LandingComponent } from './landing/landing.component';
-import { LandingHeaderComponent } from './landing/header/header.component';
+import { LandingHeaderComponent } from './header/header.component';
 
 import { ReviewsComponent } from './main/reviews/reviews.component';
 import { AppConfigModalComponent } from './main/reviews/app-config-modal/app-config-modal.component';

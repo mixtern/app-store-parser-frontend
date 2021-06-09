@@ -1,0 +1,39 @@
+<div class="mx-auto fixed z-10 montserrat" [ngClass]="this.isLanding ? 'headerLight' : 'headerDark'">
+  <div class="flex justify-between items-center h-14 border-b w-screen" [ngClass]="{'border-b':this.isLanding}">
+    <div class="flex items-center text-blue-500">
+      <a href="./" class="mx-4 flex items-center justify-center">
+        <img class="h-14 object-cover p-2" src="./assets/images/logo.svg" alt="Logo">
+        <img *ngIf="this.isLanding" class="h-14 object-cover p-2" src="./assets/images/logo_text.svg" alt="Logo">
+      </a>
+      <div *ngIf="this.isLanding" class="hidden md:block">
+        <a href="#what-we-do" class="mx-4">
+          Что мы делаем?
+        </a>
+        <a href="#what-we-can-do" class="mx-4">
+          Услуги
+        </a>
+        <a href="#about-us" class="mx-4">
+          О компании
+        </a>
+      </div>
+    </div>
+
+    <div *ngIf="!this.isLanding" class="font-bold text-blue-500">
+      <span *ngIf="this.router.url === '/reviews'">Отзывы</span>
+    </div>
+
+    <div class="flex items-center">
+      <button *ngIf="this.isLanding" class="mx-2 bg-white border-2 rounded-md border-blue-500 text-blue-500">
+        Войти
+      </button>
+      <button *ngIf="this.isLanding" class="mx-2 mr-8 bg-blue-500 border-2 rounded-md border-blue-500 text-white">
+        Регистрация
+      </button>
+      <button *ngIf="!this.isLanding" class="mx-2 mr-8">
+        <img src="./assets/images/main/burger.svg" class="mx-auto">
+      </button>
+    </div>
+  </div>
+</div>
+<!-- This thing helps reveal content underneath the header -->
+<div class="h-14"></div>

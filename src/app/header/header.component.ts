@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'landing-header',
+  selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
@@ -11,7 +11,9 @@ export class LandingHeaderComponent implements OnInit {
   constructor(router: Router) {
     this.router = router;
   }
-
+  
+  get isLanding (): boolean {return this.router.url === '/' || this.router.url.startsWith('/#');}
+  
   ngOnInit() {
     
   }
