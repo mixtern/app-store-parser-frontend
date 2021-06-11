@@ -10,6 +10,8 @@ export class RegistrationComponent implements OnInit {
   auth: AuthService;
   constructor(auth: AuthService) { this.auth = auth }
 
+  registrate() {}
+
   ngOnInit() {
   }
 
