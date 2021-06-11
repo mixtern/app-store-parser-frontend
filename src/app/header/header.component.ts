@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss', "../main/main.component.scss"]
 })
 export class LandingHeaderComponent implements OnInit {
   router: Router;
@@ -18,8 +18,8 @@ export class LandingHeaderComponent implements OnInit {
     
   }
 
-  toggleNavigation() {
-    let modal = document.getElementById("navigation");
+  toggleModalById(id) {
+    let modal = document.getElementById(id);
     modal.classList.toggle("hidden");
   }
 

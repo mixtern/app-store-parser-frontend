@@ -2,3 +2,14 @@ body {
     height: calc(100vh - 56px);
     background: linear-gradient(to bottom, #C2DFF3, #F3CCE1);
 }
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.border-1 {
+    border-width: 1px;
+}

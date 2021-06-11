@@ -1,0 +1,9 @@
+button.welcome {
+    min-width: 130px;
+    height: 40px;
+}
+
+a {
+    @apply underline;
+    @apply text-blue-400;
+}

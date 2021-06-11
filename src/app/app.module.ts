@@ -12,9 +12,11 @@ import { ReviewsComponent } from './main/reviews/reviews.component';
 import { AppConfigModalComponent } from './main/reviews/app-config-modal/app-config-modal.component';
 import { ReviewsBlockComponent } from './main/reviews/reviews-block/reviews-block.component';
 import { FooterComponent } from './footer/footer.component';
+import { RegistrationComponent } from './main/registration/registration.component';
+import { LoginComponent } from './main/login/login.component';
 
 @NgModule({
-  declarations: [			
+  declarations: [						
     AppComponent,
       LandingComponent,
       LandingHeaderComponent,
@@ -22,7 +24,9 @@ import { FooterComponent } from './footer/footer.component';
       ReviewsComponent,
       AppConfigModalComponent,
       ReviewsBlockComponent,
-      FooterComponent
+      FooterComponent,
+      RegistrationComponent,
+      LoginComponent
    ],
   imports: [
     BrowserModule,

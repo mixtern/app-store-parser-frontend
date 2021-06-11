@@ -1,0 +1,38 @@
+<body class="py-1">
+  <div class="bg-white rounded-3xl border-1 border-gray-400 w-2/5 centered p-4">
+    <div class="flex justify-end">
+      <button routerLink="/"><img src="./assets/images/main/x.svg"></button>
+    </div>
+    <div class="px-8">
+      <div class="font-bold text-3xl flex justify-center">
+        <img src="../../../assets/images/logo.svg" alt="">
+      </div>
+      <div class="font-bold text-3xl flex justify-center my-4">
+        Зарегистрироваться на сайте
+      </div>
+      <div class="my-2">
+        <label for="login-email">Как вас называть</label><br>
+        <input class="w-full" type="text" autocomplete="name" id="reg-email">
+      </div>
+      <div class="my-2">
+        <label for="login-email">Email</label><br>
+        <input class="w-full" type="email" autocomplete="email" id="reg-email">
+      </div>
+      <div class="my-2">
+        <label for="login-password">Пароль</label><br>
+        <input class="w-full" type="password" autocomplete="new-password" id="reg-password">
+      </div>
+      <div class="my-2">
+        <label for="login-password">Подтвердите пароль</label><br>
+        <input class="w-full" type="password" autocomplete="new-password" id="reg-password-repeat">
+      </div>
+      <div class="flex justify-between my-4">
+        <div class="flex justify-between gap-6">
+          <div><a href="/login">Войти</a></div>
+        </div>
+        <button class="welcome bg-blue-500 border-2 rounded-md border-blue-500 text-white">
+          Подтвердить</button>
+      </div>
+    </div>
+  </div>
+</body>
