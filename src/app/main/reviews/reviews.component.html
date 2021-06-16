@@ -22,7 +22,7 @@
     </div>
   </div>
 
-  <div class="grid grid-cols-3 mx-32 gap-16 h-5/6">
+  <div class="grid grid-cols-3 mx-32 gap-16 main-review-blocks">
     <div class="bg-white rounded-2xl p-2 flex flex-col items-center">
       <div class="font-bold mb-4">Приложения</div>
 
@@ -43,7 +43,7 @@
       </div>
       <button class="mt-auto mb-4" (click)="openAddAppModal('new')"><img src="./assets/images/main/plus.svg" alt=""></button>
     </div>
-    <div class="col-span-2 bg-white rounded-2xl p-2">
+    <div class="col-span-2 bg-white rounded-2xl p-2 max-h-full overflow-hidden">
       <app-reviews-block
       [AppId]="currentAppId">
       </app-reviews-block>

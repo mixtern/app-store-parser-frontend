@@ -36,10 +36,15 @@ export class AppConfigService {
   }
 
   getApps() {
-    return [{id: 0, appLink: "dsadas", slackLink: "yuvibvuyib", name: "AMOGUS", reviews: this.getReviews(0)}];
+    return [{id: 0, appLink: "dsadas", slackLink: "yuvibvuyib", name: "Tic Tac Text", reviews: this.getReviews(0)}];
   }
 
   getReviews(appId: number) : Review[] {
-    return [{id: 0, text: "sus", username: "IMPOSTA"}]
+    return [{id: 0, text: "Сложность искусствунного интелекта поражает! Играю все дни напролёт", username: "Professional player"},
+    {id: 1, text: "сложно и непонятно", username: "Juan"},
+    {id: 2, text: "а как играть?", username: "Jeff"},
+    {id: 3, text: "Классное приложение, и набор косметических улучшений огромный.", username: "Cosmo"},
+    {id: 4, text: "Думаю, голосовой чат был бы идеален", username: "Ted"},
+    {id: 4, text: "А можете сделать шахматы?", username: "Anon42"}]
   }
 }
