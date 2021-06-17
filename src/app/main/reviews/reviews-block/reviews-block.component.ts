@@ -4,7 +4,7 @@ import { App, Review, AppConfigService } from '../app-config.service';
 @Component({
   selector: 'app-reviews-block',
   templateUrl: './reviews-block.component.html',
-  styleUrls: ['./reviews-block.component.scss']
+  styleUrls: ['./reviews-block.component.scss', "../../main.component.scss"]
 })
 export class ReviewsBlockComponent implements OnInit {
   @Input () AppId: number | "new";

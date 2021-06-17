@@ -27,7 +27,7 @@
       <div class="font-bold mb-4">Приложения</div>
 
       <button *ngFor="let app of this.config.apps"
-      class="w-11/12 rounded-xl flex items-center overflow-hidden mb-4 bg-gray-100"
+      class="w-11/12 rounded-xl flex items-center overflow-hidden mb-4 bg-gray-100 border-1 border-gray-400"
       (click)="currentAppId=app.id">
         <img src="./assets/images/main/example/app-icon.svg" class="h-12 w-12 mr-4">
           {{app.name}}
