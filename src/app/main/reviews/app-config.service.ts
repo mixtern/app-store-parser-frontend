@@ -28,8 +28,8 @@ export class AppConfigService {
   apps: App[];
   auth: AuthService;
   constructor(auth: AuthService) { 
-    this.apps = this.getApps();
     this.auth = auth;
+    this.apps = this.getApps();
   }
   
   createApp(id: number,
@@ -37,11 +37,28 @@ export class AppConfigService {
     name?: string,
     slackLink?: string,
     reviews: Review[] = new Array) {
-    this.apps.push({id, name, appLink, slackLink, reviews});
+    axios.post("https://gres.ml/api/add-app", {
+      "url": appLink,
+      "platform": "google_play"
+    }, {
+      headers: {"Authorization" : "Bearer " + this.auth.token}
+    })
+    .then(res => {
+      console.log(res);
+    })
+    .catch(err => {
+      console.log();
+    })
   }
   getApps() {
+    console.log(this.auth.token)
     axios.get("https://gres.ml/api/integration-list", {
-          })
+        headers: {"Authorization" : "Bearer " + this.auth.token}
+      }
+    )
+    .then(res => {
+      return res.data;
+    })
     .catch(res => {
       console.log(res);
     });

@@ -12,20 +12,8 @@ export class RegistrationComponent implements OnInit {
   constructor(auth: AuthService) { this.auth = auth }
 
   registrate() {
-    axios.post("https://gres.ml/api/registration", {
-      'password': 'Password!!!',
-      'first_name': 'TestUser',
-      'last_name': 'TestUser',
-      'email': 'emal@email.email'
-    })
-    .then(res => {
-      localStorage.setItem("access", res.data.access);
-      localStorage.setItem("refresh", res.data.refresh);
-      window.location.href = "../reviews";
-    })
-    .catch(err => {
-      console.log(err);
-    })
+    this.auth.registrate();
+    window.location.href = "../reviews";
   }
 
   ngOnInit() {

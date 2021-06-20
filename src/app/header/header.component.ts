@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import axios from 'axios';
 import { AuthService } from '../auth.service';
 
 @Component({
@@ -28,19 +27,8 @@ export class LandingHeaderComponent implements OnInit {
   }
 
   logout() {
-    axios.post("https://gres.ml/api/logout", {
-      access: this.auth.token,
-      refresh: this.auth.refreshToken},
-      {
-        headers: {"Authorization" : "Bearer " + this.auth.token}
-      }
-    )
-    .then(res => {
-      console.log(res);
-    })
-    .catch(res => {
-      console.log(res);
-    })
+    this.auth.logout();
+    window.location.href = "../"
   }
 
 }
