@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import axios from 'axios';
 import { AuthService } from 'src/app/auth.service';
 
 @Component({
@@ -10,7 +11,22 @@ export class RegistrationComponent implements OnInit {
   auth: AuthService;
   constructor(auth: AuthService) { this.auth = auth }
 
-  registrate() {}
+  registrate() {
+    axios.post("https://gres.ml/api/registration", {
+      'password': 'Password!!!',
+      'first_name': 'TestUser',
+      'last_name': 'TestUser',
+      'email': 'emal@email.email'
+    })
+    .then(res => {
+      localStorage.setItem("access", res.data.access);
+      localStorage.setItem("refresh", res.data.refresh);
+      window.location.href = "../reviews";
+    })
+    .catch(err => {
+      console.log(err);
+    })
+  }
 
   ngOnInit() {
   }

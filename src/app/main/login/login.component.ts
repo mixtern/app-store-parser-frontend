@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/auth.service';
+import axios from 'axios';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,10 @@ export class LoginComponent implements OnInit {
   auth: AuthService;
   constructor(auth: AuthService) { this.auth = auth }
 
-  login(){}
+  login() {
+    this.auth.login()
+    window.location.href = "../reviews";
+  }
 
   ngOnInit() {
   }

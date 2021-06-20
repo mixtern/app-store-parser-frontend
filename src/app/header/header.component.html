@@ -9,9 +9,6 @@
         <a href="#what-we-do" class="mx-4">
           Что мы делаем?
         </a>
-        <a href="#what-we-can-do" class="mx-4">
-          Услуги
-        </a>
         <a href="#about-us" class="mx-4">
           О компании
         </a>
@@ -39,6 +36,7 @@
         <hr class="mb-2">
         <div><button routerLink="profile" (click)="toggleModalById('navigation')">Мой профиль</button></div>
         <div><button routerLink="reviews" (click)="toggleModalById('navigation')">Отзывы</button></div>
+        <div><button (click)="logout(); toggleModalById('navigation')">Выйти</button></div>
       </div>
     </div>
   </div>

@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { AuthService } from 'src/app/auth.service';
+import axios from 'axios';
 
 export class Review {
   id: number;
@@ -24,19 +26,26 @@ export class App {
 })
 export class AppConfigService {
   apps: App[];
-  constructor() { this.apps =  this.getApps()}
+  auth: AuthService;
+  constructor(auth: AuthService) { 
+    this.apps = this.getApps();
+    this.auth = auth;
+  }
   
   createApp(id: number,
     appLink: string,
     name?: string,
     slackLink?: string,
     reviews: Review[] = new Array) {
-      
     this.apps.push({id, name, appLink, slackLink, reviews});
   }
-
   getApps() {
-    return [{id: 0, appLink: "dsadas", slackLink: "yuvibvuyib", name: "Tic Tac Text", reviews: this.getReviews(0)}];
+    axios.get("https://gres.ml/api/integration-list", {
+          })
+    .catch(res => {
+      console.log(res);
+    });
+    return []
   }
 
   getReviews(appId: number) : Review[] {
